@@ -18,6 +18,11 @@ const connectionCallback = conn => {
 
       if (parsedInput.message != null) {
         // Pass on successfully parsed data to be handled
+        conn.send = (message, messageObject) => {
+          const completeMessage = Object.assign({ message }, messageObject)
+          conn.sendText(JSON.stringify(completeMessage))
+        }
+
         emitter.emit(parsedInput.message, conn, parsedInput)
       }
     } catch (error) {
