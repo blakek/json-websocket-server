@@ -15,6 +15,6 @@
     "eslint-plugin-standard": "^2.0.1"
   },
   "dependencies": {
-    "nodejs-websocket": "^1.7.1"
+    "nodejs-websocket": "^1.7.2"
   }
 }
